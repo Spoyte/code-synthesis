@@ -1,0 +1,26 @@
+model:
+  path: "./models/codellama-7b.Q4_K_M.gguf"
+  context_length: 4096
+  temperature: 0.2
+  max_tokens: 2048
+  top_p: 0.95
+  top_k: 40
+
+patterns:
+  vector_db_path: "./data/patterns.db"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  similarity_threshold: 0.85
+  max_patterns: 5
+
+parser:
+  spacy_model: "en_core_web_sm"
+  
+validation:
+  auto_format: true
+  run_type_check: true
+  generate_tests: false
+
+training:
+  codebase_paths: []
+  file_extensions: [".py", ".js", ".ts", ".go", ".rs"]
+  exclude_patterns: ["*/test*", "*/node_modules/*", "*/venv/*", "*/.git/*"]
