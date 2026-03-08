@@ -1,9 +1,0 @@
-spacy>=3.7.0
-chroma-db>=0.4.0
-sentence-transformers>=2.2.0
-llama-cpp-python>=0.2.0
-pyyaml>=6.0
-black>=23.0
-mypy>=1.0
-ast-unparse>=1.6.0
-numpy>=1.24.0
